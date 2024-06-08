@@ -9,9 +9,11 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class UserService {
     private final UserDAO userDao;
-    public UserModel create(UserModel user){
+    public UserModel createUser(UserModel user){
         user.setScore(20);
-       // userDao.save(user);
+        return userDao.save(user);
+    }
+    public UserModel attendContest(UserModel user){
         return null;
     }
 }
